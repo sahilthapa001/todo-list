@@ -1,0 +1,24 @@
+/* searchStyles.css */
+header {
+	text-align: center;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+.search {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+/* Increase input box size */
+input[type="text"] {
+	padding: 10px; /* Increase padding to make the input box bigger */
+	font-size: 16px; /* Increase font size for better readability */
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 300px; /* Adjust the width to your desired size */
+}

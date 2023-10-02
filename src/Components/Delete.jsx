@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TodoContext } from "../Context/ContextApi";
+import "./Delete.css"; // Import the external CSS file
 
 function Delete() {
 	const { todos, dispatch } = useContext(TodoContext);
@@ -12,6 +13,7 @@ function Delete() {
 	const handleDelete = (id) => {
 		dispatch({ type: "DELETE_TODO", payload: id });
 	};
+
 	return (
 		<div>
 			<ul>

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { TodoContext } from "../Context/ContextApi";
+import "./Add.css"; // Import the external CSS file
 
 function Add() {
 	const { dispatch } = useContext(TodoContext);
@@ -11,9 +12,10 @@ function Add() {
 		dispatch({ type: "ADD_TODO", payload: text });
 		setText("");
 	};
+
 	return (
 		<form className="add" onSubmit={handleSubmit}>
-			<label className="">Add a new todo</label>
+			<label>Add a new todo</label>
 			<input
 				type="text"
 				name="add"
@@ -21,7 +23,9 @@ function Add() {
 				onChange={(e) => setText(e.target.value)}
 				className=""
 			/>
-			<button type="submit">Add</button>
+			<button type="submit" className='button-dark'>
+				Add
+			</button>
 		</form>
 	);
 }
